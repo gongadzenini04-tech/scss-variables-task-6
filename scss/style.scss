@@ -1,0 +1,55 @@
+@use "variables";
+
+body {
+  background-color: variables.$bg-color;
+  font-family: variables.$main-font;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: variables.$card-bg;
+  border-radius: variables.$border-radius;
+  padding: 50px 55px;
+  max-width: 560px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  h1 {
+    color: variables.$primary-color;
+    font-size: 34px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: variables.$text-color;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    background-color: variables.$primary-color;
+    color: variables.$card-bg;
+    font-family: variables.$main-font;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 38px;
+    cursor: pointer;
+    transition:
+      background-color 0.25s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      background-color: variables.$primary-hover;
+      transform: translateY(-2px);
+    }
+  }
+}
